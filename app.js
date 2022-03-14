@@ -107,3 +107,61 @@ let listaDeSuperMercado = [
 listaDeSuperMercado.forEach(el => console.log(el));
 
 //OBJETO DATE
+
+let fechaActual = new Date(2020, 2, 14);
+
+console.log(fechaActual);
+
+console.log(fechaActual.getDay());
+console.log(fechaActual.getDate());
+console.log(fechaActual.getMonth());
+console.log(fechaActual.getFullYear());
+
+let miCumple = new Date(1991, 8, 11);
+
+console.log(miCumple);
+console.log(miCumple.toUTCString());
+
+const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre'];
+
+console.log(fechaActual.getFullYear(),  meses[fechaActual.getMonth()], fechaActual.getDate())
+
+//playGround Date un tiempo.
+let fecha = new Date();
+console.log("Día: "+fecha.getDate())
+console.log('Hoy es el día '+ fecha.getDate() +' del mes '+ fecha.getMonth() +' del año '+ fecha.getFullYear(),)
+
+//DESTRUCTURING
+
+let cursos = ['Programacion', 'mkt', 'ux'];
+
+let [programacion, , ux] = cursos;
+
+console.log(cursos);
+console.log(programacion);
+console.log(ux);
+
+let persona = {
+    nombre : 'Daniel',
+    edad : '30',
+    direccion: 'Mi casa'
+};
+
+let {nombre, direccion} = persona;
+
+console.log(persona);
+console.log(nombre);
+console.log(direccion);
+
+//playGround Destructuring Desestructuremos
+let destinosDelMundo = ['Marruecos', 'Bariloche', 'Barcelona', 'China', 'Grecia'];
+
+let [,bariloche, ,china] = destinosDelMundo;
+
+console.log(bariloche, china);
+
+//playGround Desestructuremos la Ferrari
+let auto  = {marca: 'Ferrari', kilometros: 31, color: "Rojo"};
+let { marca,  color} = auto;
+
+console.log(marca, color);
